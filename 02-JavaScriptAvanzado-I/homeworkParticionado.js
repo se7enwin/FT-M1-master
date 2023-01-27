@@ -1,34 +1,31 @@
-# Homework JavaScript Avanzado I
+// x = 1;   //Primer Parte del 10 al 28 => 6 Console.logs.
+// var a = 5;
+// var b = 10;
+// var c = function (a, b, c) {
+//    var x = 10;
+//    console.log(x);          //=> 10
+//    console.log(a);         //=> 8
+//    var f = function (a, b, c) {
+//       b = a;
+//       console.log(b);    //=> 8
+//       b = c;
+//       var x = 5;
+//    };
+//    f(a, b, c);
+//    console.log(b);     //=> 9
+// };
+// c(8, 9, 10);
+// console.log(b);    //=>  10
+// console.log(x);   //=>   1
 
-## Scope & Hoisting
 
-Determiná que será impreso en la consola, sin ejecutar el código.
+// console.log(bar); // undefined
+// console.log(baz); // reference error
+// foo();  //Hola
+// function foo() {
+//    console.log('Hola!');
+// }
 
-> Investiga cuál es la diferencia entre declarar una variable con `var` y directamente asignarle un valor.
-
-```javascript 
-x = 1;   //Primer Parte del 10 al 28 => 6 Console.logs.
-var a = 5;
-var b = 10;
-var c = function (a, b, c) {
-   var x = 10;
-   console.log(x);          //=> 10
-   console.log(a);         //=> 8
-   var f = function (a, b, c) {
-      b = a;
-      console.log(b);    //=> 8
-      b = c;
-      var x = 5;
-   };
-   f(a, b, c);
-   console.log(b);     //=> 9
-};
-c(8, 9, 10);
-console.log(b);    //=>  10
-console.log(x);   //=>   1
-```
-
-```javascript
 console.log(bar); // undefined
 console.log(baz); // reference error
 foo();  //Hola
@@ -57,9 +54,9 @@ console.log(instructor); // Tony
    }
 })();
 console.log(instructor);  //Tony
-```
 
-```javascript
+
+javascript
 var instructor = 'Tony'; 
 let pm = 'Franco';
 if (true) {
@@ -70,13 +67,13 @@ if (true) {
 }
 console.log(instructor); // 'The Flash'
 console.log(pm); // 'Franco'
-```
+
 
 ### Coerción de Datos
 
 ¿Cuál crees que será el resultado de la ejecución de estas operaciones?:
 
-```javascript
+javascript
 6 / "3"   // 2
 "2" * "3" // 6
 4 + 5 + "px" // '9px'
@@ -93,7 +90,7 @@ parseInt("09") // 9
 [3]+[3]-[10] // [23] 
 3>2>1 // False
 [] == ![] // True
-```
+
 
 > Si te quedó alguna duda repasá con [este artículo](http://javascript.info/tutorial/object-conversion).
 
@@ -101,7 +98,6 @@ parseInt("09") // 9
 
 ¿Cuál es el output o salida en consola luego de ejecutar este código? Explicar por qué:
 
-```javascript
 function test() {
    console.log(a); // undefined
    console.log(foo()); // 2
@@ -128,7 +124,7 @@ function getFood(food) {
    return snack;
 }
 
-getFood(false);
+getFood(false); // undefined => la variable snack existe pero esta undefined because false. 
 ```
 
 ### This
@@ -151,14 +147,14 @@ console.log(obj.prop.getFullname()); // Aurelio de Rosas
 
 var test = obj.prop.getFullname;
 
-console.log(test()); //Juan Perez
+console.log(test()); //Juan Perez // En visual code undefined.
 ```
 
 ### Event loop
 
 Considerando el siguiente código, ¿Cuál sería el orden en el que se muestra por consola? ¿Por qué?
 
-```javascript
+javascript
 function printing() {
    console.log(1); // 1ro
    setTimeout(function () {

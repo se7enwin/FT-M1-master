@@ -1,0 +1,73 @@
+CHECKPOINT!
+
+Es una prueba para evaluar en que condiciones se encuentran
+con respecto a los temas del M1
+
+¿Cuales son los temas del M1 que van para el checkpoint?
+
+- Closure
+- Recursion 
+- Estructura de datos (arreglos, objetos, stacks, queue, listas simples, arboles) Set? Poco probable. Hash? Poco probable
+- Algoritmos 1
+
+¿Cual será el horario del checkpoint?
+
+GMT-3 > 09hs >>> 17hs
+
+    09hs >>> 17hs - Argentina/Uy
+    07hs >>> 15hs - Colombia/Peru
+    06hs >>> 14hs - Mexico
+
+¿Como se divide el horario?
+
+    09hs a 10hs >> Nos llega el checkpoint en Students y/o al mail (Me aparecerá para rendir el checkpoint, repositorio de github)
+
+    REPO hasta 16.59 >> Podemos pushear todas las veces que quieramos al repositorio
+                 >> Pueden solucionar en cualquier orden los ejercicios, tendran test para cada uno
+                 >> Pueden consultar material INDIVIDUAL (homeworks, DS.js, Google)
+
+
+¿Como funciona el REPOSITORIO del CHECKPOINT?
+    - LEAN EL README !!
+    - NO SE FORKEA, tendran que clonarlo
+    - Nombre: usuarioGitHub / Nombre del checkpoint (fecha)
+
+    - ENSEGUIDA QUE LOGRO CLONARLO, INTENTO PUSHEAR ALGO!
+    - LEAN EL README !!
+
+
+¿Cuantos ejercicios? > README 
+¿Con cuanto apruebo? > README
+Tengo problemas con GitHub > README errores comunes
+
+
+CONDICIONES DE APROBACION > README 
+
+        - Estan basadas en los TEST (Habra que pasar cierta cantidad de test (N/X cantidad de test)
+        - Si no llego a pasar la cantidad necesaria, no estoy aprobando
+
+        - I M P O R T A N T E !! >
+                - SOLO SERAN CONSIDERADOS POR HENRY, LOS CAMBIOS QUE SE ENCUENTREN EN GitHub 
+                    que si no logro pushear antes de las 17hs, no cuenta lo que hice.
+         ¿Si pusheo despues de las 17?
+                - SOLO SE TOMA EN CUENTA LO ANTERIOR A LAS 17hs
+
+
+QUE PASA DESPUES DEL CHECKPOINT >
+        - APROBADO
+            - COMENZAMOS EL LUNES A LAS 10hs (GMT-3)
+            - Comenzamos con el M2
+        - DESAPROBADO
+            - Henry hace mi migracion, para volver a cursar/practicar el M1
+            - Cuando recurso, esta mas enfocado a la practica
+            - Comienzo el LUNES
+
+
+
+BUENAS PRACTICAS y ACLARACIONES
+
+- Enseguida que logro clonar, intento pushear algo.
+- Me apoyo en las homeworks que he hecho
+
+
+- Tendran acceso a todas las estructuras y clases, que hicieron en las homeworks

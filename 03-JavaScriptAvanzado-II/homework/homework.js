@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // Closures
 
@@ -13,7 +13,14 @@ nuevoContador()     // 2
 const otroContador = counter()
 otroContador()      // 1
 otroContador()      // 2 */
-function counter() {}
+
+function counter() {
+  let contador = 1;
+
+  return function () {
+    return contador++;
+  };
+}
 
 /* Ejercicio 2
 Tu tarea aquí es lograr, mediante un closure, que cacheFunction actúe como una memoria caché para el callback 
@@ -33,24 +40,60 @@ otra vez cálculos que ya se hicieron anteriormente.
   squareCache(5)    // invocará a square(5), almacenará el resultado y lo retornará
   squareCache(5)    // no volverá a invocar a square, simplemente buscará en la caché cuál es el resultado de square(5) y lo retornará (tip: si usaste un objeto, podés usar hasOwnProperty) */
 
-function cacheFunction(cb) {}
+function cacheFunction(cb) {
+  var cache = {};
+
+  // return function (argumento) {
+  //   if (cache.hasOwnProperty(argumento)) {
+  //     console.log(cache);
+  //     return cache[argumento];
+  //   } else {
+  //     // guardando el resultado (si no existia) y devolverlo
+  //     cache[argumento] = cb(argumento);
+  //     return cache[argumento];
+  //   }
+  // };
+
+  return function (argumento) {
+    if (!cache.hasOwnProperty(argumento)) {
+      cache[argumento] = cb(argumento);
+      return cache[argumento];
+    }
+
+    return cache[argumento];
+  };
+}
+
+console.log(
+  cacheFunction(function () {
+    console.log("suma");
+  })
+);
+
+// function permitido(a){
+//   if(a > 18) return "ok"
+//   else "no"
+// }
+
+// const aux = cacheFunction(permitido)
 
 //----------------------------------------
 
 // Bind
 
 var instructor = {
-   nombre: 'Franco',
-   edad: 25,
+  nombre: "Franco",
+  edad: 25,
 };
 
 var alumno = {
-   nombre: 'Juan',
-   curso: 'FullStack',
+  nombre: "Juan",
+  curso: "FullStack",
 };
 
 function getNombre() {
-  return this.nombre;}
+  return this.nombre; // Esta el "this" en el contexto global, o sea, apunta al Global
+}
 
 /*
   Ejercicio 3
@@ -58,8 +101,10 @@ function getNombre() {
   Usando el método bind() guardar, en las dos variables declaradas a continuación, dos funciones que actúen como getNombre pero retornen el nombre del instructor y del alumno, respectivamente.
 */
 
-let getNombreInstructor = getNombre.bind();
-let getNombreAlumno = getNombre.bind();
+let getNombreInstructor = getNombre.bind(instructor);
+let getNombreAlumno = getNombre.bind(alumno);
+
+console.log(getNombreInstructor());
 
 /*
   Ejercicio 4
@@ -67,22 +112,24 @@ let getNombreAlumno = getNombre.bind();
 */
 
 function crearCadena(delimitadorIzquierda, delimitadorDerecha, cadena) {
-    return delimitadorIzquierda + cadena + delimitadorDerecha;
+  return delimitadorIzquierda + cadena + delimitadorDerecha;
 }
 
-let textoAsteriscos = crearCadena.bind();
-let textoGuiones = crearCadena.bind();
-let textoUnderscore = crearCadena.bind();
+let textoAsteriscos = crearCadena.bind(this, "*", "*");
+let textoGuiones = crearCadena.bind(null, "-", "-");
+let textoUnderscore = crearCadena.bind(this, "_", "_");
+
+console.log(crearCadena.bind(this, "*", "*"));
 
 // No modifiquen nada debajo de esta linea
 // --------------------------------
 
 module.exports = {
-   counter,
-   cacheFunction,
-   getNombreInstructor,
-   getNombreAlumno,
-   textoAsteriscos,
-   textoGuiones,
-   textoUnderscore,
+  counter,
+  cacheFunction,
+  getNombreInstructor,
+  getNombreAlumno,
+  textoAsteriscos,
+  textoGuiones,
+  textoUnderscore,
 };
